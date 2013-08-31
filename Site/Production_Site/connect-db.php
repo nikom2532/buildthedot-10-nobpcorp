@@ -1,11 +1,10 @@
 <?php
 
- // Database Arming
+ // Database Variables (edit with your own server information)
  $server = 'localhost';
- $user = 'iming';
- $pass = 'iming';
- $db = ' buildthedot_10nobpcorp';
- 
+ $user = 'buildthe_nobp';
+ $pass = '123456';
+ $db = 'buildthe_nobpcorp'; 
  
  // Connect to Database
  $connection = mysql_connect($server, $user, $pass) 

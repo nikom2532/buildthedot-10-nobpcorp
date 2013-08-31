@@ -10,7 +10,7 @@
  $server = 'localhost';
  $user = 'iming';
  $pass = 'iming';
- $db = ' buildthedot_10nobpcorp';
+ $db = 'buildthedot_10nobpcorp';
  
  
  // Connect to Database

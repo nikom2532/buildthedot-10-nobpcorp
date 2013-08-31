@@ -10,7 +10,7 @@
                     	$SQL= "select `name` from `buildthedot_nobp_account` where `username`=\"".$_SESSION["username"]."\" ;";
 						$db->query($SQL);
 						if($rs=$db->fetchAssoc()){
-							echo $rs[""];
+							echo $rs["name"];
 						}
 ?>
                     </li>
