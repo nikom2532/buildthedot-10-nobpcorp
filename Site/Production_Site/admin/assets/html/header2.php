@@ -33,13 +33,13 @@
 				<li <?php if($_GET["sgid"]>=1&&$_GET["sgid"]<=3){?>class="active"<?php } ?>>
 					<h3><span class="icon-dashboard"></span>Label</h3>
 					<ul>
-						<li>
+						<li <?php if($_GET["sgid"]==1){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=1">Barcode Label</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==2){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=2">Wiremark Label</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==3){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=3">Safety Signs Label</a>
 						</li>
 					</ul>
@@ -48,16 +48,16 @@
 				<li <?php if($_GET["sgid"]==4||$_GET["sgid"]==5||$_GET["sgid"]==6||$_GET["sgid"]==7){?>class="active"<?php } ?>>
 					<h3><span class="icon-tasks"></span>Printer</h3>
 					<ul>
-						<li>
+						<li <?php if($_GET["sgid"]==4){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=4">Safety Printer</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==5){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=5">Wiremark Printer</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==6){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=6">Barcode Printer</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==7){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=7">Other Printer</a>
 						</li>
 					</ul>
@@ -65,22 +65,22 @@
 				<li <?php if($_GET["sgid"]>=8&&$_GET["sgid"]<=13){?>class="active"<?php } ?>>
 					<h3><span class="icon-calendar"></span>Lockout</h3>
 					<ul>
-						<li>
+						<li <?php if($_GET["sgid"]==8){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=8">Electrical Lockout</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==9){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=9">Valve Lockout</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==10){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=10">Log out Station</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==11){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=11">Tags/Group Lock Bock</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==12){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=12">Padlock/hasps</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==13){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=13">Others</a>
 						</li>
 					</ul>
@@ -88,16 +88,16 @@
 				<li <?php if($_GET["sgid"]>=14&&$_GET["sgid"]<=17){?>class="active"<?php } ?>>
 					<h3><span class="icon-heart"></span>Electrical</h3>
 					<ul>
-						<li>
+						<li <?php if($_GET["sgid"]==14){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=14">Electrical</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==15){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=15">Brady Glo</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==16){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=16">Pipemarker</a>
 						</li>
-						<li>
+						<li <?php if($_GET["sgid"]==17){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=17">Safety Signs</a>
 						</li>
 					</ul>
