@@ -1,7 +1,10 @@
 ﻿<?php
 $rootpath ="../../";
 include($rootpath."assets/html/header.php");
-if(!(isset($_FILES['imagefile']) && count($_FILES['imagefile']['error']) == 1 && $_FILES['imagefile']['error'][0] > 0)){
+//if(!(isset($_FILES['imagefile']) && count($_FILES['imagefile']['error']) == 1 && $_FILES['imagefile']['error'][0] > 0)){
+	
+if(!(!file_exists($_FILES['imagefile']['tmp_name']) || !is_uploaded_file($_FILES['imagefile']['tmp_name']))){
+	
 	if ($_FILES["imagefile"]["error"] > 0) {
 		echo "Error: " . $_FILES["imagefile"]["error"] . "<br>";
 	} else {
@@ -33,7 +36,7 @@ if(!(isset($_FILES['imagefile']) && count($_FILES['imagefile']['error']) == 1 &&
 		} else {
 			if (move_uploaded_file($_FILES["imagefile"]['tmp_name'], $target_path)) {
 				echo "The file " . basename($_FILES["imagefile"]['name']) . " has been uploaded";
-				include($rootpath."assets/html/upload_process4_2sql.php");
+				include($rootpath."assets/html/edit_process_2sql.php");
 			} else {
 				echo "There was an error uploading the file, please try again!";
 			}
@@ -41,9 +44,11 @@ if(!(isset($_FILES['imagefile']) && count($_FILES['imagefile']['error']) == 1 &&
 	} else {
 		echo "Invalid file";
 	}
+	//echo "a";
 }
 else{
-	include($rootpath."assets/html/upload_process4_3sql.php");
+	include($rootpath."assets/html/edit_process_3sql.php");
+	//echo "b";
 }
 
 include($rootpath."assets/html/footer.php");
