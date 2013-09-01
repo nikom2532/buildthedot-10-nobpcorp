@@ -24,7 +24,7 @@
 		<div class="grid_3">
 			<ul>
 				<li class="btn btn-blue">
-					<a href="<?php echo $rootpath; ?>admin-form-upload.php">Upload photo</a>
+					<a href="<?php echo $rootpath; ?>admin-form-upload.php?sgid=<?php echo $_GET["sgid"]; ?>">Upload photo</a>
 				</li>
 			</ul>
 		</div>

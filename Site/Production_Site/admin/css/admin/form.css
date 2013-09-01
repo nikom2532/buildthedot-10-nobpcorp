@@ -1,0 +1,93 @@
+/* CSS Document */
+/* ---------- FORMS ---------- */
+form label {
+	display: block;
+	text-transform: uppercase;
+	color: #2a2e36;
+	margin: 0 0 0.3125em 0;
+}
+
+form label.alt-label { text-transform: none; }
+
+form input[type="text"], input[type="password"], textarea {
+	border: 1px solid #d9dbdd;
+	padding: 1em 0.625em; /* 16/16 10/16 */
+	outline: none;
+}
+	form input[type="text"]:hover, input[type="password"]:hover, textarea:hover,
+	form input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+		border: 1px solid #bbbdbe;
+	}
+	
+form input[type="checkbox"], form input[type="radio"] { margin-right: 0.833em; /* 10/12 */ }
+
+form#search-form input {
+	border: none;
+	/* The inner text overflows on the BG image, so we're setting a right padding to stop that */
+	padding-right: 3em; /* 36/12 */
+}
+	form#search-form input:focus {
+		/* Same as .dark:hover */
+		background-color: #5d6677;
+		color: white;
+	}
+
+form p em {
+	margin-top: 0.833em; /* 10/12 */
+	display: block;
+}
+
+form p.form-error, form p.form-error label { color: #cf4425; }
+
+form p.form-error em {
+	background: transparent url('../images/icons/message-boxes/error.png') no-repeat left center;
+	padding-left: 2em; /* 24/12 */
+}
+
+form input.error-input { border: 1px solid #ff876f; }
+	form input.error-input:hover { border: 1px solid #b03e27; }
+
+/* Styling the HTML5 placeholders */
+/* So far they don't work in: IE, Opera 10 and below, Firefox 3.6 and below */
+::-webkit-input-placeholder { color: #858d9c; }
+:-moz-placeholder { color: #858d9c; }
+
+div#wrap-login {
+	background: #f8f9fa;
+	border: 1px solid #eeefef;
+	padding: 1.875em 0; /* 30/16 */
+}
+
+form#login-form {
+	width: 18.75em; /* 300/16 */
+	margin: 0 auto;
+}
+
+/*----------Button ------------*/
+/* ---------- BUTTONS ---------- */
+.button {
+	display: inline-block;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 0.833em;
+	padding-right: 0.833em;
+	padding-bottom: 0.833em;
+	padding-left: 0.833em;
+	width:auto;
+	height:20px;
+}
+
+.dark {
+	background-color: #3f4551;
+	color: white;
+}
+	.dark:hover {
+		background-color: #5d6677;
+		color: white;
+	}
+.image-left {
+	background-position: 0.833em center; /* 10/12 */
+	padding-left: 3em; /* 36/12 */
+}
+.ic-left-arrow { background-image: url("../images/ic_left.png"); }

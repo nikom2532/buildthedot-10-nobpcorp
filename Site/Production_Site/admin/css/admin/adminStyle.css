@@ -198,15 +198,22 @@ body {
 }
 /******Button******/
 .btn{
-	color:#FFF;
-	font-weight:600;
-	background-color:#0880E3;
-	padding:0 10px 10px;;
+	color: #FFF;
+	font-weight: 600;
+	background-color: #0880E3;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .btn:hover {
 	color:#FFF;
 	background-color:#494848;
 }
+#return-website {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
 .btn-grey{
 	background-color:#494848;
 }
@@ -324,4 +331,43 @@ body {
 }
 #text-info ul li .text-filename {
 	font-weight: 400;
+}
+#wrap-logo-center {
+	width: 960px;
+	margin: auto;
+	padding-top: 40px;
+	pading-left: 20px;
+	height: 100px;
+	text-align: center;
+}
+#wrap-login {
+	height: auto;
+	width: 100%;
+	background-color: #666;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#wrap-logo-center img {
+	pading-left:65px;
+}
+#edit-pass a{
+	color: #0880E3;
+	
+}
+#edit-pass a:hover{
+	color: #39F;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #39F;
+}
+.edit-link {
+	margin-top: 25px;
+}
+.edit-link a {
+	padding: 10px;
+	color: #FFF;
+	font-weight: bold;
 }

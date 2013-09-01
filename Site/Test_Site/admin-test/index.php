@@ -6,7 +6,7 @@ include($rootpath."assets/html/header.php");
 <br />User: <?php echo $_SESSION["username"];?><br />
 <a href="./logout_process.php">Logout</a><br />
 
-<form action="./upload_process4.php" method="post" enctype="multipart/form-data" >
+<form action="./upload_process4.php" method="post" enctype="multipart/form-data">
   item name: <input type="text" name="item_name"><br/>
   image: <input type="file" name="imagefile"><br/>
   pdf file: <input type="file" id="pdffile" name="pdffile"><br />
