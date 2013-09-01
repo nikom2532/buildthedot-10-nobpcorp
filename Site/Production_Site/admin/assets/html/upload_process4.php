@@ -1,5 +1,5 @@
 ﻿<?php
-$rootpath ="./";
+$rootpath ="../../";
 include($rootpath."assets/html/header.php");
 
 if ($_FILES["imagefile"]["error"] > 0) {
@@ -13,8 +13,8 @@ if ($_FILES["imagefile"]["error"] > 0) {
 ?>
 
 <?php
-$target_path = "upload/";
-$filename = basename($_FILES["imagefile"]['name']);
+$target_path = $rootpath."../images/product/";
+$filename = $_POST["sgid"]."_".strtotime("now")."_".basename($_FILES["imagefile"]['name']);
 $target_path = $target_path . $filename;
 
 $allowedExts = array("gif", "jpeg", "jpg", "png");
@@ -33,7 +33,7 @@ if ((($_FILES["imagefile"]["type"] == "image/gif")
 	} else {
 		if (move_uploaded_file($_FILES["imagefile"]['tmp_name'], $target_path)) {
 			echo "The file " . basename($_FILES["imagefile"]['name']) . " has been uploaded";
-			include($rootpath."upload_process4_2sql.php");
+			include($rootpath."assets/html/upload_process4_2sql.php");
 		} else {
 			echo "There was an error uploading the file, please try again!";
 		}

@@ -23,6 +23,8 @@ if (!$db->open()){
 <link rel="apple-touch-icon" href="css/images/icon-57x57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="css/images/icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="css/images/icon-114x114.png">
+<link href="css/jquery_notification.css" type="text/css" rel="stylesheet"/>
+
 </head>
 
 <body>

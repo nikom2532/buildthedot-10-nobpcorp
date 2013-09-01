@@ -1,5 +1,6 @@
 ﻿		<script src="js/prefix.js"jquery-l.js></script>
 		<script src="js/jquery-1.7.1.min.js"jquery-l.js></script>
+		<script type="text/javascript" src="js/jquery_notification_v.1.js"></script>
 		<script type="text/javascript">
 			/*jQuery time*/
 			$(document).ready(function() {
@@ -13,5 +14,10 @@
 				})
 			})
 		</script>
+<?php
+		if($_GET["u_suc"]==1){
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-u_suc.js"></script><?php
+		}
+?>
 	</body>
 </html>

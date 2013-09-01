@@ -19,8 +19,8 @@
 			</ul>
 		</div><!--end wrap-title -->
 		<div class="grid_13" id="wrap-content">
-			<h4 class="head-form">Upload photo</h4>
-			<form action="<?php echo $rootpath; ?>assets/html/upload_process4.php?sgid=<?php echo $GET["sgid"]; ?>" method="post" enctype="multipart/form-data">
+			<h4 class="head-form">Upload photo</h4><?=$G?>
+			<form action="<?php echo $rootpath; ?>assets/html/upload_process4.php" method="post" enctype="multipart/form-data">
 				<div class="grid_2 title-form">
 					Title
 				</div>
@@ -37,6 +37,7 @@
 				<div class="grid_8 prefix_2">
 					<input type="submit" value="Submit">
 				</div>
+				<input name="sgid" type="hidden" value="<?php echo $_GET["sgid"]; ?>" />
 			</form>
 		</div><!--end wrap-title -->
 	</div><!--end container -->
