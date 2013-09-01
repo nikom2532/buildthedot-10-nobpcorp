@@ -60,7 +60,7 @@
 				WHERE `subgroup_id` = \"{$_GET["sgid"]}\"
 			";
 			$db->query($SQL);
-			if($rs=$db->fetchAssoc()){
+			while($rs=$db->fetchAssoc()){
 				//echo $rs["name"];
 ?>
 				<div class="grid_3">

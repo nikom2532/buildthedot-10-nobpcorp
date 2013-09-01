@@ -20,7 +20,7 @@
 		</div><!--end wrap-title -->
 		<div class="grid_13" id="wrap-content">
 			<h4 class="head-form">Upload photo</h4>
-			<form action="<?php echo $rootpath; ?>assets/html/upload_process4.php" method="post" enctype="multipart/form-data">
+			<form action="<?php echo $rootpath; ?>assets/html/upload_process4.php?sgid=<?php echo $GET["sgid"]; ?>" method="post" enctype="multipart/form-data">
 				<div class="grid_2 title-form">
 					Title
 				</div>

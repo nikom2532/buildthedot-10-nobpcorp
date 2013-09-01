@@ -1,14 +1,14 @@
 ﻿<?php
-	$SQL=
+$sgid=$GET["sgid"];
+$SQL=
 "INSERT INTO `buildthedot_nobp_item` (
-`id` ,
 `subgroup_id` ,
 `item_name` ,
 `image_path` ,
 `pdf_link_status`
 )
 VALUES (
-NULL ,  '1',  '1',  '{$filename}',  'y'
+'1',  '{$sgid}',  '{$filename}',  'n'
 );";
 	$db->query($SQL);
 	// if($rs=$db->fetchAssoc()){
