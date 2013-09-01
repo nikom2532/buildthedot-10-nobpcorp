@@ -18,6 +18,9 @@
 		if($_GET["u_suc"]==1){
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-u_suc.js"></script><?php
 		}
+		elseif($_GET["e_suc"]==1){
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_suc.js"></script><?php
+		}
 ?>
 	</body>
 </html>

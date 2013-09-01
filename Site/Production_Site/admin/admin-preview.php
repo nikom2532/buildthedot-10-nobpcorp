@@ -63,15 +63,17 @@
 			while($rs=$db->fetchAssoc()){
 				//echo $rs["name"];
 ?>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="<?php echo $rootpath; ?>../images/product/<?php echo $rs["image_path"]; ?>" alt="Label Product">
-						<br/>
+				<a href="<?php echo $rootpath; ?>admin-form-edit.php?id=<?php echo $rs["id"]; ?>">
+					<div class="grid_3">
+						<div id="box" class="box">
+							<img src="<?php echo $rootpath; ?>../images/product/<?php echo $rs["image_path"]; ?>" alt="Label Product">
+							<br/>
+						</div>
+						<div class="wordwrap">
+							<?php echo $rs["item_name"]; ?>
+						</div>
 					</div>
-					<div class="wordwrap">
-						<?php echo $rs["item_name"]; ?>
-					</div>
-				</div>
+				</a>
 <?php
 			}
 			/*
@@ -215,4 +217,4 @@ if ($_POST["login_messaage"] == "login_false") {
 ?>
 <?php
 	include ($rootpath . "assets/html/footer.php");
- ?>
+?>

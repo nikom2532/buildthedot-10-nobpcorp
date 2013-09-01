@@ -1,6 +1,6 @@
 ﻿<?php
 $sgid=$_POST["sgid"];
-$tiem_name=$_POST["item_name"];
+$item_name=$_POST["item_name"];
 $SQL=
 "INSERT INTO `buildthedot_nobp_item` (
 `subgroup_id` ,
@@ -9,7 +9,7 @@ $SQL=
 `pdf_link_status`
 )
 VALUES (
-'{$sgid}', '{$tiem_name}', '{$filename}',  'F'
+'{$sgid}', '{$item_name}', '{$filename}',  'F'
 );";
 	$db->query($SQL);
 	// if($rs=$db->fetchAssoc()){

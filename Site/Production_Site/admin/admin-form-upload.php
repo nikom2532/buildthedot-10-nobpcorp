@@ -25,14 +25,14 @@
 					Title
 				</div>
 				<div class="grid_8">
-					<input name="item_name" type="text" size="50">
+					<input name="item_name" type="text" size="50" />
 				</div>
 				<br class="clear"/>
 				<div class="grid_2 title-form">
 					Photo
 				</div>
 				<div class="grid_8">
-					<input name="imagefile" type="file" size="50">
+					<input name="imagefile" type="file" size="50" />
 				</div>
 				<div class="grid_8 prefix_2">
 					<input type="submit" value="Submit">
