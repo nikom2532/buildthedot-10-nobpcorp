@@ -88,5 +88,5 @@
 else{
 	include ($rootpath."assets/html/login_page.php");
 }
-	include ($rootpath . "assets/html/footer.php");
+	include ($rootpath."assets/html/footer.php");
 ?>

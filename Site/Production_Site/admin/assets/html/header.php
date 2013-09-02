@@ -18,7 +18,9 @@ if (!$db->open()){
 <link rel="stylesheet" href="css/normalize.css" type="text/css">
 <link rel="stylesheet" href="css/admin/960.css">
 <link href="css/admin/adminStyle.css" rel="stylesheet" type="text/css">
-<link href="css/admin/form.css" rel="stylesheet" type="text/css">
+<?php if($_SESSION["username"]==""){ ?>
+	<link href="css/admin/form.css" rel="stylesheet" type="text/css">
+<?php } ?>
 <!--icon -->
 <link rel="shortcut icon" href="css/images/favicon.ico">
 <link rel="apple-touch-icon" href="css/images/icon-57x57.png">

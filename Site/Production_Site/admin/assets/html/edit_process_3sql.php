@@ -10,7 +10,7 @@ WHERE `username` = '".$_SESSION["username"]."'
 ;";
 $db->query($SQL);
 if($rs=$db->fetchAssoc()){
-	
+	$account_id=$rs["account_id"];
 }
 
 
@@ -19,7 +19,7 @@ echo $SQL=
 "
 UPDATE  `buildthedot_nobp_item` 
 SET `item_name` =  '{$item_name}', 
-`account_id` = ''
+`account_id` = '{$account_id}'
 WHERE  `id` = {$item_id}
 ;";
 $db->query($SQL);

@@ -14,6 +14,7 @@
 				})
 			})
 		</script>
+		<script src="js/script2.js"></script>
 <?php
 		if($_GET["u_suc"]==1){
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-u_suc.js"></script><?php

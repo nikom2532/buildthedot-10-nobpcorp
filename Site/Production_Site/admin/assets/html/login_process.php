@@ -17,7 +17,7 @@ where `username`=\"$username\" and `password`=\"".$password."\" and `admin_statu
 	if($rs=$db->fetchAssoc()){
 		$_SESSION["username"]=$username;
 		//$_SESSION["name"]=$rs["name"];
-		header("location: {$rootpath}admin-preview.php");
+		header("location: {$rootpath}admin-preview.php?sgid=1");
 	}
 	else{
 ?>
