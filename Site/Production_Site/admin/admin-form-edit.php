@@ -1,7 +1,8 @@
 <?php
 	$rootpath="./";
 	include("assets/html/header.php");
-	include($rootpath."assets/html/header2.php"); 
+	if($_SESSION["username"]!=""){
+		include($rootpath."assets/html/header2.php"); 
 	
 		$item_id=$_GET["id"];
 		$SQL="SELECT * 
@@ -28,8 +29,19 @@
 					<div id="text-info">
 						<ul class="wordwrap">
 							<li class="title-name">Filename:  <span class="text-filename"><?php echo $rs["image_path"]; ?></span></li>
-							<li class="title-name">Update date:  <span class="text-filename">Sep 29, 2013</span></li>
-							<li class="title-name">Update by:  <span class="text-filename"><?php echo $rs["account_id"]; ?></span></li>
+							<li class="title-name">Update date:  <span class="text-filename"><?php echo $rs["datetime"]; ?></span></li>
+							<li class="title-name">Update by:  <span class="text-filename"><?php
+								$SQL2="
+									SELECT * 
+									FROM `buildthedot_nobp_account`
+									WHERE `id` = '{$rs["account_id"]}' 
+								";
+							 	$db->query($SQL2);
+								if($rs2=$db->fetchAssoc()){
+									echo $rs2["name"];
+								}
+							 
+							 ?></span></li>
 						</ul>
 					</div>  
 				</div><!--end wrap-imageinfo -->
@@ -67,4 +79,24 @@
     </div><!--end wrap-box -->
 <!--js -->
 
-<?php include($rootpath."assets/html/footer.php"); ?>
+<?php
+	}// end if user
+	else{
+?>
+		<form action="./assets/html/login_process.php" method="post">
+			Username:
+			<input type="text" name="username">
+			<br />
+			Password:
+			<input type="password" name="password">
+			<br />
+			<input type="submit" value="Submit" />
+			<br />
+		</form>
+		<?php
+		if ($_POST["login_messaage"] == "login_false") {
+			echo "Username or Password incorrect.";
+		}
+	}
+
+	include($rootpath."assets/html/footer.php"); ?>

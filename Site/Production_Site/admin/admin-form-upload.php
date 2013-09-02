@@ -1,8 +1,8 @@
 <?php
 	$rootpath = "./";
 	include ("assets/html/header.php");
-?>
-<?php
+	if($_SESSION["username"]!=""){
+		
 	include ($rootpath . "assets/html/header2.php");
 ?>
 		<div class="grid_13" id="wrap-title">
@@ -45,5 +45,24 @@
 <!--js -->
 
 <?php
+	}// end if user
+	else{
+?>
+		<form action="./assets/html/login_process.php" method="post">
+			Username:
+			<input type="text" name="username">
+			<br />
+			Password:
+			<input type="password" name="password">
+			<br />
+			<input type="submit" value="Submit" />
+			<br />
+		</form>
+		<?php
+		if ($_POST["login_messaage"] == "login_false") {
+			echo "Username or Password incorrect.";
+		}
+	}
+
 	include ($rootpath . "assets/html/footer.php");
 ?>
