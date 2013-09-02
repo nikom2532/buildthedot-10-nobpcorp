@@ -1,9 +1,9 @@
 ﻿<?
 
 	$host="localhost";
-	$username="buildthe_nobp";
-	$password="123456";
-	$database="buildthe_nobpcorp";
+	$username="iming";
+	$password="iming";
+	$database="buildthedot_10nobpcorp";
 	$db=new DB($host,$username,$password,$database);
           //$db->open();
           //$db->query("");

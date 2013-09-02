@@ -11,7 +11,7 @@
 				<a href="#">Label</a>
 			</li>
 			<li>
-				>
+				&gt;
 			</li>
 			<li>
 				<a href="#" class="active">Barcode label</a>
@@ -75,117 +75,6 @@
 					</a>
 <?php
 				}
-				/*
-?>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-				<div class="grid_3">
-					<div id="box" class="box">
-						<img src="images/icon-tag.png" alt="Label Product">
-						<br/>
-					</div>
-					<div class="wordwrap">
-						bbbbbbsssdLddddsssssssssssssssdd.jpg
-					</div>
-				</div>
-<?php		*/
 ?>
 			</div><!--end mainwrapper -->
 		</div><!--end wrap-mainwrapper -->
@@ -197,21 +86,7 @@
 <?php
 }
 else{
-?>
-	<form action="./assets/html/login_process.php" method="post">
-		Username:
-		<input type="text" name="username">
-		<br />
-		Password:
-		<input type="password" name="password">
-		<br />
-		<input type="submit" value="Submit" />
-		<br />
-	</form>
-	<?php
-	if ($_POST["login_messaage"] == "login_false") {
-		echo "Username or Password incorrect.";
-	}
+	include ($rootpath."assets/html/login_page.php");
 }
 	include ($rootpath . "assets/html/footer.php");
 ?>
