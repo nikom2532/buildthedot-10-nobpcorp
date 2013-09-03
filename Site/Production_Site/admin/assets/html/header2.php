@@ -16,7 +16,7 @@
 				</li>
 				<li class="btn btn-blue"
 				>
-					<a href="#">My Account</a>
+					<a href="<?php echo $rootpath; ?>my-account.php">My Account</a>
 				</li>
 				<li class="btn btn-grey">
 					<a href="<?php echo $rootpath; ?>assets/html/logout_process.php">Sign out</a>
