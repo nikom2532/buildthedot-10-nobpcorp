@@ -2,7 +2,7 @@
 $sgid=$_POST["sgid"];
 $item_name=$_POST["item_name"];
 
-echo "<br />";
+//echo "<br />";
 echo $SQL = "
 SELECT * 
 FROM  `buildthedot_nobp_account` 
@@ -32,5 +32,5 @@ VALUES (
 		// $_SESSION["username"]=$username;
 		// header("location: ./");
 	// }
-	//header("location: ".$rootpath."./admin-form-upload.php?sgid=".$sgid."&u_suc=1");
+	header("location: ".$rootpath."./admin-form-upload.php?sgid=".$sgid."&u_suc=1");
 ?>

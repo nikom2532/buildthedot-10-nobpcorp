@@ -3,19 +3,17 @@ $sgid=$_POST["sgid"];
 $item_id=$_POST["item_id"];
 $item_name=$_POST["item_name"];
 
-echo $SQL="
-SELECT *
-FROM  `buildthedot_nobp_account`
+$SQL="
+SELECT * 
+FROM `buildthedot_nobp_account` 
 WHERE `username` = '".$_SESSION["username"]."'
 ;";
 $db->query($SQL);
 if($rs=$db->fetchAssoc()){
-	$account_id=$rs["account_id"];
+	$account_id=$rs["id"];
 }
 
-
-
-echo $SQL=
+$SQL=
 "
 UPDATE  `buildthedot_nobp_item` 
 SET `item_name` =  '{$item_name}', 
@@ -23,7 +21,6 @@ SET `item_name` =  '{$item_name}',
 WHERE  `id` = {$item_id}
 ;";
 $db->query($SQL);
-	
 	
 	// if($rs=$db->fetchAssoc()){
 		// $_SESSION["username"]=$username;
