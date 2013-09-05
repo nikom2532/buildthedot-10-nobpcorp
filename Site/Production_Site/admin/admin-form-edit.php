@@ -65,7 +65,8 @@
 						</div>
 						<div>
 							<input type="submit" value="Save" />
-							<input type="button" value="Delete" class="button" onclick="item_del_confirm();" />
+							<input type="button" value="Delete" class="button" onclick="item_del_confirm('<?php echo $rootpath; ?>', '<?php echo $_GET["id"]; ?>');" />
+							<?php /* '<?php echo urlencode($rootpath); ?>', */ ?>
 						</div>
 						<input name="sgid" type="hidden" value="<?php echo $rs["subgroup_id"]; ?>" />
 						<input name="item_id" type="hidden" value="<?php echo $item_id; ?>" />

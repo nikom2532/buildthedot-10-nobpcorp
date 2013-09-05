@@ -26,5 +26,5 @@ $db->query($SQL);
 		// $_SESSION["username"]=$username;
 		// header("location: ./");
 	// }
-	header("location: ".$rootpath."./admin-form-edit.php?sgid=".$sgid."&e_suc=1");
+	header("location: ".$rootpath."./admin-preview.php?sgid=".$sgid."&e_suc=1");
 ?>

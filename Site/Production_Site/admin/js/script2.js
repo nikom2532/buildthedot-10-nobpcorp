@@ -1,7 +1,7 @@
-function item_del_confirm() {
+function item_del_confirm(rootpath,id) {
 	var r = confirm("Do you want to comfirm to delete! ?");
 	if (r == true) {
-		alert("You pressed OK!");
+		window.location = rootpath+"assets/html/delete_process.php?id="+id;
 	} else {
 		// alert("You pressed Cancel!");
 	}
