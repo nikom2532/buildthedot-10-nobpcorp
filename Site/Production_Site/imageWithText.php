@@ -98,7 +98,6 @@ $(document).ready(function(){
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
                     </ul>                </li>
-                <li><a href="#">News & Event</a></li>
                 <li><a href="#">Contact Us</a></li>
                </ul>    
             </nav>
@@ -132,11 +131,17 @@ $(document).ready(function(){
 		
 		) or die(mysql_error());  
 		
+		if ($subGroup == "") {
+			?>
+			<h3 class="content-title"><?php echo $group;?></h3>
+			<?php
+		} else {
+			?>
+			<h3 class="content-title"><?php echo $group;?> > <span class="active-title"><?php echo $subGroup;?></span></h3>
+			<?php
+		}
 ?>
-
-            <h3 class="content-title"><?php echo $group;?> > <span class="active-title"><?php echo $subGroup;?></span></h3>
-            <div id="mainwrapper">        
-            
+            <div id="mainwrapper">                  
 <?php
  
         // loop through results of database query
@@ -145,10 +150,29 @@ $(document).ready(function(){
 				echo "<div class='grid_3'>";
                 echo    "<div id='box' class='box'>";				
                 echo            "<img src='images/product/".$row['image_path']."' width='177' height='163' alt=".$row['item_name'].">";
-                echo     		"<span class='caption simple-caption'>";
-                echo        		'<h3>'.$row['item_name'].'</h3>';
-                echo    		"</span>";
+				
+				/*
+				if ($row['item_name'] == "") {
+					echo     		"<span>";
+				} else {
+					echo     		"<span class='caption simple-caption'>";
+				}
+				
+				if ($row['pdf_link_status'] == "F") {
+					echo        		'<h3>'.$row['item_name'].'</h3>';
+				} else {
+					echo				'<h3><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a></h3>';
+				}
+				*/
+				
                 echo    "</div>";
+					echo	"<div id=product-name>";
+					if ($row['pdf_link_status'] == "F") {
+						echo        		'<h3>'.$row['item_name'].'</h3>';
+					} else {
+						echo				'<h3><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif"></h3>';
+					}
+					echo "</div>";
                 echo "</div>";
         }
 		

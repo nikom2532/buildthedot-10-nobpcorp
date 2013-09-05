@@ -94,7 +94,6 @@ $(document).ready(function(){
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
                     </ul>                </li>
-                <li><a href="#">News & Event</a></li>
                 <li><a href="#">Contact Us</a></li>
                </ul>    
             </nav>
