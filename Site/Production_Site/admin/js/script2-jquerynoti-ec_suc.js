@@ -1,5 +1,5 @@
 showNotification({
-	message : "Edited Success",
+	message : "Deleted Success",
 	autoClose : true,
 	duration : 5,
 	type : "success"
