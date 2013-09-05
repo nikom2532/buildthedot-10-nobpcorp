@@ -21,7 +21,7 @@ where `username`=\"$username\" and `password`=\"".$password."\" and `admin_statu
 	}
 	else{
 ?>
-		<form id="login_false_message" action="index.php" method="POST">
+		<form id="login_false_message" action="<?php echo $rootpath; ?>admin-preview.php" method="POST">
 			<input type="hidden" id="login_messaage" name="login_messaage" value="login_false" />
 		</form-->
 		<script>
