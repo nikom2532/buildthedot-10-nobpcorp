@@ -23,7 +23,7 @@
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_suc.js"></script><?php
 		}
 		elseif($_GET["ec_suc"]==1){
-			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_suc.js"></script><?php
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-ec_suc.js"></script><?php
 		}
 ?>
 	</body>
