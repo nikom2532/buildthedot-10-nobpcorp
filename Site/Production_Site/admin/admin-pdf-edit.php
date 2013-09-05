@@ -19,7 +19,7 @@
 				</ul>
 			</div><!--end wrap-title -->
 			<div class="grid_13" id="wrap-content">
-				<h4 class="head-form">Edit photo</h4>
+				<h4 class="head-form">Edit PDF File</h4>
 				<div id="wrap-imageinfo" class="grid_5">
 					<div id="mainwrapper">
 						<div id="box" class="box">
@@ -49,7 +49,7 @@
 					<form action="<?php echo $rootpath; ?>assets/html/edit_process.php" method="post" enctype="multipart/form-data">
 						<div>
 							<h5>Name</h5>
-							<input name="item_name" type="text" size="80" value="<?php echo $rs["item_name"]; ?>" />
+							<?php echo $rs["item_name"]; ?>
 						</div>
 						<!--div>
 							<h5>Alt Text</h5>
@@ -60,17 +60,13 @@
 							<input name="linkURL" type="text" size="80" />
 						</div-->
 						<div class="margin-top-10">
-							<h5>Change Image</h5>
+							<h5>Change PDF</h5>
+							<input name="imagefile" type="checkbox" />
 							<input name="imagefile" type="file" />
 						</div>
-						<div id="edit-pdf" class="margin-top-10">
-							<h5><a href="<?php echo $rootpath; ?>admin-pdf-edit.php?id=<?php echo $_GET["id"]; ?>">Change PDF</a></h5>
-<!-- 							<input name="pdf_file" type="file" /> -->
-						</div>
 						<div class="margin-top-20">
-							<input type="submit" value="Save" />
-							<input type="button" value="Delete" class="button" onclick="item_del_confirm('<?php echo $rootpath; ?>', '<?php echo $_GET["id"]; ?>');" />
-							<?php /* '<?php echo urlencode($rootpath); ?>', */ ?>
+							<input type="submit" value="Update" />
+							<input type="button" value="Cancel" class="button" onclick="window.location.href = '<?php echo $rootpath; ?>admin-form-edit.php?id=<?php echo $_GET["id"]; ?>';" />
 						</div>
 						<input name="sgid" type="hidden" value="<?php echo $rs["subgroup_id"]; ?>" />
 						<input name="item_id" type="hidden" value="<?php echo $item_id; ?>" />
