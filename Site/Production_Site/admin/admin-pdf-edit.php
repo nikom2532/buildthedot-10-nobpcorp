@@ -40,7 +40,6 @@
 								if($rs2=$db->fetchAssoc()){
 									echo $rs2["name"];
 								}
-							 
 							 ?></span></li>
 						</ul>
 					</div>  
@@ -61,7 +60,9 @@
 						</div-->
 						<div class="margin-top-10">
 							<h5>Change PDF</h5>
-							<input name="imagefile" type="checkbox" />
+							<label><input type="checkbox" name="pdf_file_checkbox" value="value" />Use PDF</label>
+						</div>	
+						<div class="margin-top-10">
 							<input name="imagefile" type="file" />
 						</div>
 						<div class="margin-top-20">

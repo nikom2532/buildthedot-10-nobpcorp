@@ -98,7 +98,7 @@ $(document).ready(function(){
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
                     </ul>                </li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
                </ul>    
             </nav>
         </div> 
@@ -168,9 +168,9 @@ $(document).ready(function(){
                 echo    "</div>";
 					echo	"<div id=product-name>";
 					if ($row['pdf_link_status'] == "F") {
-						echo        		'<h3>'.$row['item_name'].'</h3>';
+						echo        		''.$row['item_name'].'';
 					} else {
-						echo				'<h3><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif"></h3>';
+						echo				'<a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif">';
 					}
 					echo "</div>";
                 echo "</div>";

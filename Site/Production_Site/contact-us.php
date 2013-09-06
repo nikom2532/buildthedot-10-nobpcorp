@@ -8,29 +8,55 @@
 <link rel="stylesheet" href="css/normalize.css" type="text/css">
 <link rel="stylesheet" href="css/960.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/form.css">
 <!--icon -->
 <link rel="shortcut icon" href="css/images/favicon.ico">
 <link rel="apple-touch-icon" href="css/images/icon-57x57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="css/images/icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="css/images/icon-114x114.png">
-<script src="js/jquery-l.js"jquery-l.js></script>
+<script type='text/javascript' src='js/jquery-l.js'></script>
+<script type='text/javascript' src='js/respond.min.js'></script>
+<script type='text/javascript' src='js/jquery.validate.js'></script>
 <script type="text/javascript">
 $(document).ready(function(){
 
 	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
 	
 	$("ul.topnav li span").click(function() { //When trigger is clicked...
+		
+		//Following events are applied to the subnav itself (moving subnav up and down)
 		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
 
 		$(this).parent().hover(function() {
 		}, function(){	
 			$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
 		});
+
+		//Following events are applied to the trigger (Hover events for the trigger)
 		}).hover(function() { 
 			$(this).addClass("subhover"); //On hover over, add class "subhover"
 		}, function(){	//On Hover Out
 			$(this).removeClass("subhover"); //On hover out, remove class "subhover"
 	});
+	//-------Validate---------//
+	 $("#form1").validate({
+				rules: {
+				   name: "required",// simple rule, converted to {required:true}
+				   	email: {// compound rule
+				   	  required: true
+					},
+					phone: {
+					  required: true
+					},
+			
+		
+				},
+				messages: {
+				  name:"กรุณาระบุชื่อผู้ติดต่อ",
+				  email: "กรุณาระบุอีเมลล์",
+				  phone: "กระณาระบุหมายเลขโทรศัพท์",
+				}
+				 });
 
 });
 </script>
@@ -41,7 +67,7 @@ $(document).ready(function(){
          <!--menu -->
        <div id="wrap-header">
            <div id="header" class="grid_6">
-                <img src="images/logo.png" alt="NOBP Corporation Group">
+                <img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
            </div>
            <div class="grid_4 right" id="header-tel">
                <ul>
@@ -56,7 +82,7 @@ $(document).ready(function(){
             <nav>
                 <ul class="topnav one-edge-shadow">	
                 <li>
-               		<a href="index.php" class="active" id="home"><img src="images/icon-home.png"></a></li>								
+               		<a href="index.php" class="active" id="home"><img src="images/icon-home-w.png"></a></li>								
                     <li><a href="#">About</a></li>
                     <li>
                     <a href="">Label</a>
@@ -97,73 +123,53 @@ $(document).ready(function(){
                 <li><a href="contact-us.php">Contact Us</a></li>
                </ul>    
             </nav>
-        </div>
+        </div> 
     </div>
-     <div class="container_12" id="wrap-pic">
-     	 <img src="images/all-products.jpg" width="960" height="380" alt="All Products">
-                <h4 class="btn-product" id="safetysigns">
-                        <a class="btn-product btn-blue" href="#">
-                            <span class="btn-product-title">Safety Signs</span>
-                        </a>
-			  	</h4>
-                <h4 class="btn-product" id="label">
-                        <a class="btn-product btn-blue" href="#">
-                            <span class="btn-product-title">Label</span>
-                        </a>
-			  	</h4>
-                <h4 class="btn-product" id="lockout">
-                        <a class="btn-product btn-blue" href="#">
-                            <span class="btn-product-title">Lockout</span>
-                        </a>
-			  	</h4>
-                <h4 class="btn-product" id="electrical">
-                        <a class="btn-product btn-blue" href="#">
-                            <span class="btn-product-title">Electrical</span>
-                        </a>
-			  	</h4>
-     </div>
-    <div class="container_12" id="wrap-content">
+    <div class="container_12" id="wrap-content-notoppic">
     	<div id="content-intro">
-        	<h1 class="home-title">Welcome to nobpcorp.com</h1>
-            <p>
-            NOBP ให้บริการผลิตภัณฑ์ด้านการวางระบบไฟฟ้า,อิเล็คทรอนิคส์ และสินค้า Safety signs ที่ใช้ในโรงงานอุตสาหกรรมภายใต้ Brand "Brady, Ferraz, Federial signal,Panduit, A.T.X." NOBP เกิดจากการรวมกลุ่มของผู้เชี่ยวชาญด้านการออกแบบ และจำหน่ายผลิตภัณฑ์ Label หลากหลายชนิด เพื่อตอบสนองทุกความต้องการของลูกค้า  
-            </p>
-            <h1 class="title">Our Product</h1>
-            <div id="mainwrapper">
-                <div class="grid_3 indent">
-                    <div id="box" class="box grid_6">					
-                            <img src="images/icon-tag.png" width="177" height="163" alt="Label Product">
-                     <span class="caption simple-caption">
-                        <h3>Label</h3>
-                    </span>
-                    </div>
+            <h3 class="content-title">Contact us</h3>
+            <div class="grid_5" id="wrap-contact-form">
+            	<form action="send-email.php" id="form1" method="POST">	
+
+				<div>
+					<h3>ชื่อ <span class="red">*</span></h3>
+					<input type="text" id="name" name="name" autofocus />
+				</div>
+				<div>
+					อีเมลล์ <span class="red">*</span>
+					<input type="email" id="email"  name="email"/>
+				</div>
+                <div>
+					เบอร์โทรศัพท์ <span class="red">*</span>
+					<input type="text" id="phone" name="phone"/>
+				</div>
+                <div>
+					เรื่องที่ติดต่อ <span class="red">*</span>
+					<input type="text" id="topic" name="topic"/>
+				</div>
+                <div>
+					รายละเอียด <span class="red">*</span>
+					<textarea name="detail" cols="5" rows="5"></textarea>
+				</div>
+                <div>
+				<input type="submit" value="ส่งข้อความ">
+                <input type="reset" value="ลบข้อความ" class="btn-black">
+				</div>
+		</form>
+            
+            </div>
+            <div class="grid_6" id="wrap-address">
+            	<div id="address">
+                  <h3>NOBP Corporation Group Co.,Ltd.<h3> 
+                  <h4 id="add">44/213-214 ซอย รามอินทรา 65 ถ.รามอินทรา แขวงท่าแร้ง เขตบางเขน กรุงเทพฯ 10230</h4>
+                  <h5 id="tel">0-2945-7261-2 / Fax. 0-2945-8554</h5>
                 </div>
-                <div class="grid_3 indent">
-                    <div id="box" class="box grid_6">					
-                       	<img src="images/icon-electrical.png">
-                     <span class="caption simple-caption">
-                        <h3>Electrical</h3>
-                    </span>
-                    </div>
+            	<div id="map">
+            	<img src="images/map.gif"  alt="Map">
                 </div>
-                <div class="grid_3 indent">
-                    <div id="box" class="box grid_6">					
-                        <img src="images/icon-saftysign.png">
-                     <span class="caption simple-caption">
-                        <h3>Safety Signs</h3>
-                    </span>
-                    </div>
-                </div>
-                <div class="grid_3 indent">
-                    <div id="box" class="box grid_6">					
-                        <img src="images/icon-log.png">
-                     <span class="caption simple-caption">
-                        <h3>Log Out</h3>
-                    </span>
-                    </div>
-                </div>
-            </div><!--end mainwrapper -->
-        </div><!--end content -->
+            </div>
+           
+        </div><!--end content-intro -->
     </div><!--end container -->
    <div id="wrap-footer">	
 		<div class="container_12" id="footer">

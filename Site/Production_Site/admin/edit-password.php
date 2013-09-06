@@ -31,21 +31,21 @@
 							Old password
 						</div>
 						<div class="grid_8">
-							<input name="oldpass" type="text" size="50" />
+							<input name="oldpass" type="password" size="50" />
 						</div>
 						<br class="clear"/>
 						<div class="grid_3 title-form">
 							New password
 						</div>
 						<div class="grid_8">
-							<input name="newpass" type="text" size="50" />
+							<input name="newpass" type="password" size="50" />
 						</div>
 						<br class="clear"/>
 						<div class="grid_3 title-form">
 							Re-type new password
 						</div>
 						<div class="grid_8">
-							<input name="renewpass" type="text" size="50" />
+							<input name="renewpass" type="password" size="50" />
 						</div>
 						<br class="clear"/>
 						<!--button -->

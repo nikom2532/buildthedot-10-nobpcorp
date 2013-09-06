@@ -15,7 +15,8 @@ html[xmlns] .clearfix {
      height: 1%;
 }
 body{
-	/*font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	background-image: url(../images/gray_jean.png);
+	background-repeat: repeat;	
 }
 p{
 	text-indent: 70px;	
@@ -107,12 +108,12 @@ h6 {
 #wrap-header {
 	height: 90px;
 	width: 100%;
-	background-color: #F1F1F1;
+	background-color: #F7F7F7;
 	padding-top: 0px;
 }
 #header {
-	background-color: #F1F1F1;
-	margin-top: 5px;
+	margin-top: 10px;
+	padding-left:18px;
 }
 
 #header-tel ul {
@@ -283,6 +284,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 .btn-blue {
 	background-color: #100b4e;
 }
+.btn-black {
+	background-color: #333332;
+}
 #safetysigns {
 	position: absolute;
 	z-index: 99999;
@@ -424,6 +428,56 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 	padding-left: 30px;
 }
 
-#product-name h3{
-	text-align:center;
+#wrap-contact-form input {
+	margin-left: 30px;
+}
+#wrap-contact-form input[type="submit"] {
+	margin-top: 18px;
+	margin-left:0px;
+}
+#wrap-contact-form input[type="reset"]{
+	 margin-left:15px;
+}
+#wrap-contact-form textarea  {
+	margin-left: 30px;
+}
+#map {
+	display: inline-block;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#map img{
+	float: left;
+	height: 300px;
+	width: 460px;
+}
+#address {
+	padding-left: 10px;
+	font-weight: bold;
+}
+#address h3 {
+	background-image: url(../images/icon-home-b.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left: 35px;
+	text-indent: 0px;
+}
+#address h4 {
+	text-indent: 0px;
+	padding-left: 35px;
+}
+#address h5 {
+	background-image: url(../images/icon-phone.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left: 5px;
+	font-size: 1em;
+}
+/*-----------form validate------------*/
+label.error{
+	color:#FFD400;
+	margin-top:-10px;
+	font-size:1.1em;
 }
