@@ -25,6 +25,12 @@
 		elseif($_GET["ec_suc"]==1){
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-ec_suc.js"></script><?php
 		}
+		elseif($_GET["e_error1"]==1){
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_error1.js"></script><?php
+		}
+		elseif($_GET["e_error1"]==2){
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_error2.js"></script><?php
+		}
 ?>
 	</body>
 </html>

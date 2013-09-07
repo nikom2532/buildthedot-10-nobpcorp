@@ -48,10 +48,27 @@
 							<input name="renewpass" type="password" size="50" />
 						</div>
 						<br class="clear"/>
+<?php
+						if($_GET["e_error1"]==1){
+?>
+							<div class="grid_8">
+								Wrong Old Password
+							</div>
+<?php
+						}
+						elseif($_GET["e_error1"]==2){
+?>
+							<div class="grid_8">
+								Not the same new 2 Passwords
+							</div>
+<?php
+						}
+?>
+						<br class="clear"/>
 						<!--button -->
 						<div class="grid_5 prefix_3">
-							<input type="submit" value="Save">
-							<input type="button" value="Cancel" class="button">
+							<input type="submit" value="Save" />
+							<input type="button" value="Cancel" class="button" />
 						</div>
 					</div><!--end wrap-title -->
 				</form>
