@@ -1,11 +1,22 @@
 <?
 				
-		$file_name=$_GET['id'];
-		/*
+		$id=$_GET['id'];
+		
+		// connect to the database
+        include('connect-db.php');
+ 
+        // get results from database
+        $result = mysql_query("SELECT * FROM buildthedot_nobp_item_pdf WHERE item_id = ".$id) or die(mysql_error()); 
+		
+		// loop through results of database query
+        while($row = mysql_fetch_array( $result )) {
+			$file_name = $row['pdf_link'];
+		}
+		
 		$filepath="pdf/";
 		$filename=$filepath.$file_name;
-		$filename=$filepath.$file_name.".pdf";
-		*/
+		//$filename=$filepath.$file_name.".pdf";
+		
 		
 		
 // fix for IE catching or PHP bug issue
