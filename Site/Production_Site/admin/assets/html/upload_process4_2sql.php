@@ -32,5 +32,5 @@ VALUES (
 		// $_SESSION["username"]=$username;
 		// header("location: ./");
 	// }
-	header("location: ".$rootpath."./admin-preview.php?sgid=".$sgid."&u_suc=1");
+	header("location: ".$rootpath."./admin-preview.php?sgid=".$sgid."&e_suc=1");
 ?>

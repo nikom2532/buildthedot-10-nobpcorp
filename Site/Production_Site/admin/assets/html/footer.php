@@ -9,6 +9,9 @@
 		elseif($_GET["e_suc"]==1){
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-e_suc.js"></script><?php
 		}
+		elseif($_GET["d_suc"]==1){
+			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-d_suc.js"></script><?php
+		}
 		elseif($_GET["ec_suc"]==1){
 			?><script src="<?php echo $rootpath; ?>js/script2-jquerynoti-ec_suc.js"></script><?php
 		}

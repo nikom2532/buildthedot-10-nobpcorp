@@ -50,14 +50,6 @@
 							<h5>Name:</h5>
 							<?php echo $rs["item_name"]; ?>
 						</div>
-						<!--div>
-							<h5>Alt Text</h5>
-							<input name="alt" type="text" size="80" />
-						</div>
-						<div>
-							<h5>Link URL</h5>
-							<input name="linkURL" type="text" size="80" />
-						</div-->
 						<div class="margin-top-10">
 							<h5>Change PDF:</h5>
 						</div>
@@ -71,9 +63,9 @@
 							{
 								$pdf_link_status=$rs3["pdf_link_status"];
 								if($rs3["pdf_link_status"]=="T"){
-									echo "There are pdf file. this file name is: ";
+									echo "There are pdf file. this file name <br/>is: ";
 									$SQL4="SELECT * 
-										FROM  `buildthedot_nobp_pdf`
+										FROM  `buildthedot_nobp_item_pdf`
 										WHERE `item_id`='{$item_id}';";
 									$db->query($SQL4);
 									if($rs4=$db->fetchAssoc()){
@@ -87,10 +79,10 @@
 ?>
 						</div>
 						<div class="margin-top-10">
-							<label><input name="pdf_file_checkbox" id="group1" type="checkbox" value="value" <?php if($pdf_link_status=="T"){ ?>checked<?php } ?> />Use PDF</label>
+							<label><input name="pdf_file_checkbox" id="group1" type="checkbox" value="pdf_checkbox" <?php if($pdf_link_status=="T"){ ?>checked<?php } ?> />Use PDF</label>
 						</div>
 						<div class="margin-top-10">
-							<input name="imagefile" class="group1" type="file" />
+							<input name="pdffile" class="group1" type="file" />
 						</div>
 						<div class="margin-top-20">
 							<input type="submit" value="Update" onclick="" />
