@@ -79,22 +79,21 @@ $(document).ready(function(){
     </div><!--end container_12 --> 
     <div id="wrap-nav">
     	<div class="container_12">
-            <nav>
-                <ul class="topnav one-edge-shadow">	
-                <li>
-               		<a href="index.php" class="active" id="home"><img src="images/icon-home-w.png"></a></li>								
-                    <li><a href="#">About</a></li>
+           <nav>
+                <ul id="top-nav" class="one-edge-shadow">
+                    <li><a href="index.php" id="home"><img src="images/icon-home-w.png"></a></li>
+                     <li><a href="#">About</a></li>
                     <li>
-                    <a href="">Label</a>
-                    <ul class="subnav">
-                        <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
-                        <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
+                        <a href="">Label</a>
+                        <ul class="noJS">
+                            <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
+                             <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
                         <li><a href="imageWithText.php?id=1&subId=3&group=Label&subGroup=Safety Signs Label">Safety Signs Label</a></li>
-                    </ul>
-            	</li>
-				<li>
+                        </ul>
+                    </li>
+                    <li>
                 	<a href="#">Printer</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=2&subId=4&group=Printer&subGroup=Safety Printer">Safety Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=5&group=Printer&subGroup=Wiremark Printer">Wiremark Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=6&group=Printer&subGroup=Barcode Printer">Barcode Printer</a></li>
@@ -103,7 +102,7 @@ $(document).ready(function(){
                 </li>
                 <li>
                 	<a href="#">Lockout</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=3&subId=8&group=Lockout&subGroup=Electrical Lockout">Electrical Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=9&group=Lockout&subGroup=Valve Lockout">Valve Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=10&group=Lockout&subGroup=Log out Station">Log out Station</a></li>
@@ -115,7 +114,7 @@ $(document).ready(function(){
                 <li><a href="imageWithText.php?id=4&subId=14&group=Electrical">Electrical</a></li>
                 <li>
                 	<a href="#">Safety Signs</a>
-                    <ul class="subnav">
+                    <ul class="noJS">
                         <li><a href="imageWithText.php?id=5&subId=15&group=Safety Signs&subGroup=Brady Glo">Brady Glo</a></li>
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
@@ -127,28 +126,28 @@ $(document).ready(function(){
     </div>
     <div class="container_12" id="wrap-content-notoppic">
     	<div id="content-intro">
-            <h3 class="content-title">Contact us</h3>
+            <h4 class="content-title">Contact us</h4>
             <div class="grid_5" id="wrap-contact-form">
             	<form action="send-email.php" id="form1" method="POST">	
 
 				<div>
-					<h3>ชื่อ <span class="red">*</span></h3>
+					<h4 class="bold">ชื่อ <span class="red">*</span></h4>
 					<input type="text" id="name" name="name" autofocus />
 				</div>
 				<div>
-					อีเมลล์ <span class="red">*</span>
+					<h4 class="bold">อีเมลล์ <span class="red">*</span></h4>
 					<input type="email" id="email"  name="email"/>
 				</div>
                 <div>
-					เบอร์โทรศัพท์ <span class="red">*</span>
+					<h4 class="bold">เบอร์โทรศัพท์ <span class="red">*</span></h4>
 					<input type="text" id="phone" name="phone"/>
 				</div>
                 <div>
-					เรื่องที่ติดต่อ <span class="red">*</span>
+					<h4 class="bold">เรื่องที่ติดต่อ</h4>
 					<input type="text" id="topic" name="topic"/>
 				</div>
                 <div>
-					รายละเอียด <span class="red">*</span>
+					<h4 class="bold">รายละเอียด</h4>
 					<textarea name="detail" cols="5" rows="5"></textarea>
 				</div>
                 <div>

@@ -61,7 +61,7 @@
 						<div class="margin-top-10">
 							<h5>Change PDF</h5>
 							<label><input type="checkbox" name="pdf_file_checkbox" value="value" />Use PDF</label>
-						</div>	
+						</div>
 						<div class="margin-top-10">
 							<input name="imagefile" type="file" />
 						</div>

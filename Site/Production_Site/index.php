@@ -14,26 +14,6 @@
 <link rel="apple-touch-icon" sizes="72x72" href="css/images/icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="css/images/icon-114x114.png">
 <script src="js/jquery-l.js"jquery-l.js></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
-	
-	$("ul.topnav li span").click(function() { //When trigger is clicked...
-		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
-
-		$(this).parent().hover(function() {
-		}, function(){	
-			$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
-		});
-		}).hover(function() { 
-			$(this).addClass("subhover"); //On hover over, add class "subhover"
-		}, function(){	//On Hover Out
-			$(this).removeClass("subhover"); //On hover out, remove class "subhover"
-	});
-
-});
-</script>
 </head>
 
 <body>
@@ -41,7 +21,7 @@ $(document).ready(function(){
          <!--menu -->
        <div id="wrap-header">
            <div id="header" class="grid_6">
-                <img src="images/logo.png" alt="NOBP Corporation Group">
+                <img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
            </div>
            <div class="grid_4 right" id="header-tel">
                <ul>
@@ -54,21 +34,20 @@ $(document).ready(function(){
     <div id="wrap-nav">
     	<div class="container_12">
             <nav>
-                <ul class="topnav one-edge-shadow">	
-                <li>
-               		<a href="index.php" class="active" id="home"><img src="images/icon-home.png"></a></li>								
-                    <li><a href="#">About</a></li>
+                <ul id="top-nav" class="one-edge-shadow">
+                    <li><a href="index.php" id="home"><img src="images/icon-home-w.png"></a></li>
+                     <li><a href="#">About</a></li>
                     <li>
-                    <a href="">Label</a>
-                    <ul class="subnav">
-                        <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
-                        <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
+                        <a href="">Label</a>
+                        <ul class="noJS">
+                            <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
+                             <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
                         <li><a href="imageWithText.php?id=1&subId=3&group=Label&subGroup=Safety Signs Label">Safety Signs Label</a></li>
-                    </ul>
-            	</li>
-				<li>
+                        </ul>
+                    </li>
+                    <li>
                 	<a href="#">Printer</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=2&subId=4&group=Printer&subGroup=Safety Printer">Safety Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=5&group=Printer&subGroup=Wiremark Printer">Wiremark Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=6&group=Printer&subGroup=Barcode Printer">Barcode Printer</a></li>
@@ -77,7 +56,7 @@ $(document).ready(function(){
                 </li>
                 <li>
                 	<a href="#">Lockout</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=3&subId=8&group=Lockout&subGroup=Electrical Lockout">Electrical Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=9&group=Lockout&subGroup=Valve Lockout">Valve Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=10&group=Lockout&subGroup=Log out Station">Log out Station</a></li>
@@ -89,7 +68,7 @@ $(document).ready(function(){
                 <li><a href="imageWithText.php?id=4&subId=14&group=Electrical">Electrical</a></li>
                 <li>
                 	<a href="#">Safety Signs</a>
-                    <ul class="subnav">
+                    <ul class="noJS">
                         <li><a href="imageWithText.php?id=5&subId=15&group=Safety Signs&subGroup=Brady Glo">Brady Glo</a></li>
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
@@ -99,7 +78,7 @@ $(document).ready(function(){
             </nav>
         </div>
     </div>
-     <div class="container_12" id="wrap-pic">
+	<div class="container_12" id="wrap-pic">
      	 <img src="images/all-products.jpg" width="960" height="380" alt="All Products">
                 <h4 class="btn-product" id="safetysigns">
                         <a class="btn-product btn-blue" href="#">
@@ -124,11 +103,11 @@ $(document).ready(function(){
      </div>
     <div class="container_12" id="wrap-content">
     	<div id="content-intro">
-        	<h1 class="home-title">Welcome to nobpcorp.com</h1>
+        	<h2 class="home-title">Welcome to nobpcorp.com</h2>
             <p>
             NOBP ให้บริการผลิตภัณฑ์ด้านการวางระบบไฟฟ้า,อิเล็คทรอนิคส์ และสินค้า Safety signs ที่ใช้ในโรงงานอุตสาหกรรมภายใต้ Brand "Brady, Ferraz, Federial signal,Panduit, A.T.X." NOBP เกิดจากการรวมกลุ่มของผู้เชี่ยวชาญด้านการออกแบบ และจำหน่ายผลิตภัณฑ์ Label หลากหลายชนิด เพื่อตอบสนองทุกความต้องการของลูกค้า  
             </p>
-            <h1 class="title">Our Product</h1>
+            <h2 class="title">Our Product</h2>
             <div id="mainwrapper">
                 <div class="grid_3 indent">
                     <div id="box" class="box grid_6">					
@@ -150,15 +129,15 @@ $(document).ready(function(){
                     <div id="box" class="box grid_6">					
                         <img src="images/icon-saftysign.png">
                      <span class="caption simple-caption">
-                        <h3>Safety Signs</h3>
-                    </span>
+                        <h3>Safety Signs</h3
+                    ></span>
                     </div>
                 </div>
                 <div class="grid_3 indent">
                     <div id="box" class="box grid_6">					
                         <img src="images/icon-log.png">
-                     <span class="caption simple-caption">
-                        <h3>Log Out</h3>
+                     <span class="caption simple-caption">                          <h3>Log Out</h3>
+
                     </span>
                     </div>
                 </div>
@@ -187,7 +166,6 @@ $(document).ready(function(){
 <!--js -->
 <!--<script src="js/jquery.js"></script>-->
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>  
+<script src="js/plugins.js"></script> 
 </body>
 </html>

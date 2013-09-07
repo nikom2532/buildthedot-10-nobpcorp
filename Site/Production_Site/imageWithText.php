@@ -14,30 +14,6 @@
 <link rel="apple-touch-icon" sizes="72x72" href="css/images/icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="css/images/icon-114x114.png">
 <script src="js/jquery-l.js"jquery-l.js></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-	$("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
-	
-	$("ul.topnav li span").click(function() { //When trigger is clicked...
-		
-		//Following events are applied to the subnav itself (moving subnav up and down)
-		$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
-
-		$(this).parent().hover(function() {
-		}, function(){	
-			$(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
-		});
-
-		//Following events are applied to the trigger (Hover events for the trigger)
-		}).hover(function() { 
-			$(this).addClass("subhover"); //On hover over, add class "subhover"
-		}, function(){	//On Hover Out
-			$(this).removeClass("subhover"); //On hover out, remove class "subhover"
-	});
-
-});
-</script>
 </head>
 
 <body>
@@ -45,7 +21,7 @@ $(document).ready(function(){
          <!--menu -->
        <div id="wrap-header">
            <div id="header" class="grid_6">
-                <img src="images/logo.png" alt="NOBP Corporation Group">
+                <img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
            </div>
            <div class="grid_4 right" id="header-tel">
                <ul>
@@ -58,21 +34,20 @@ $(document).ready(function(){
     <div id="wrap-nav">
     	<div class="container_12">
             <nav>
-                <ul class="topnav one-edge-shadow">	
-                <li>
-               		<a href="index.php" class="active" id="home"><img src="images/icon-home.png"></a></li>								
-                    <li><a href="#">About</a></li>
+                <ul id="top-nav" class="one-edge-shadow">
+                    <li><a href="index.php" id="home"><img src="images/icon-home-w.png"></a></li>
+                     <li><a href="#">About</a></li>
                     <li>
-                    <a href="">Label</a>
-                    <ul class="subnav">
-                        <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
-                        <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
+                        <a href="">Label</a>
+                        <ul class="noJS">
+                            <li><a href="imageWithText.php?id=1&subId=1&group=Label&subGroup=Barcode Label">Barcode Label</a></li>
+                             <li><a href="imageWithText.php?id=1&subId=2&group=Label&subGroup=Wiremark Label">Wiremark Label</a></li>
                         <li><a href="imageWithText.php?id=1&subId=3&group=Label&subGroup=Safety Signs Label">Safety Signs Label</a></li>
-                    </ul>
-            	</li>
-				<li>
+                        </ul>
+                    </li>
+                    <li>
                 	<a href="#">Printer</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=2&subId=4&group=Printer&subGroup=Safety Printer">Safety Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=5&group=Printer&subGroup=Wiremark Printer">Wiremark Printer</a></li>
                         <li><a href="imageWithText.php?id=2&subId=6&group=Printer&subGroup=Barcode Printer">Barcode Printer</a></li>
@@ -81,7 +56,7 @@ $(document).ready(function(){
                 </li>
                 <li>
                 	<a href="#">Lockout</a>
-                	<ul class="subnav">
+                	<ul class="noJS">
                         <li><a href="imageWithText.php?id=3&subId=8&group=Lockout&subGroup=Electrical Lockout">Electrical Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=9&group=Lockout&subGroup=Valve Lockout">Valve Lockout</a></li>
                         <li><a href="imageWithText.php?id=3&subId=10&group=Lockout&subGroup=Log out Station">Log out Station</a></li>
@@ -93,7 +68,7 @@ $(document).ready(function(){
                 <li><a href="imageWithText.php?id=4&subId=14&group=Electrical">Electrical</a></li>
                 <li>
                 	<a href="#">Safety Signs</a>
-                    <ul class="subnav">
+                    <ul class="noJS">
                         <li><a href="imageWithText.php?id=5&subId=15&group=Safety Signs&subGroup=Brady Glo">Brady Glo</a></li>
                         <li><a href="imageWithText.php?id=5&subId=16&group=Safety Signs&subGroup=Pipemarker">Pipemarker</a></li>
                         <li><a href="imageWithText.php?id=5&subId=17&group=Safety Signs&subGroup=Safety Signs">Safety Signs</a></li>
@@ -137,7 +112,13 @@ $(document).ready(function(){
 			<?php
 		} else {
 			?>
-			<h3 class="content-title"><?php echo $group;?> > <span class="active-title"><?php echo $subGroup;?></span></h3>
+           <div class="nav-title">
+			<ul>
+			<li><?php echo $group;?></li>
+            <li><span class="active-title"><?php echo $subGroup;?></span></li>
+            </ul>
+            </div>
+            <br class="clear"/>
 			<?php
 		}
 ?>
@@ -168,9 +149,9 @@ $(document).ready(function(){
                 echo    "</div>";
 					echo	"<div id=product-name>";
 					if ($row['pdf_link_status'] == "F") {
-						echo        		''.$row['item_name'].'';
+						echo        		'<h5>'.$row['item_name'].'</h5>';
 					} else {
-						echo				'<a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif">';
+						echo				'<h5><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif"></h5>';
 					}
 					echo "</div>";
                 echo "</div>";
