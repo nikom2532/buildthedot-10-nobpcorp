@@ -8,13 +8,13 @@
 		<div class="grid_13" id="wrap-title">
 			<ul>
 				<li>
-					<a href="#">Label</a>
+					<a href="#"><?php echo $group_name; ?></a>
 				</li>
 				<li>
 					&gt;
 				</li>
 				<li>
-					<a href="#" class="active">Barcode label</a>
+					<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>" class="active"><?php echo $subgroup_name; ?></a>
 				</li>
 			</ul>
 		</div><!--end wrap-title -->

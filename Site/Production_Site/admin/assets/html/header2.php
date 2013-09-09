@@ -97,12 +97,17 @@
 						</li>
 					</ul>
 				</li>
-				<li <?php if($_GET["sgid"]>=14&&$_GET["sgid"]<=17){?>class="active"<?php } ?>>
+				<li <?php if($_GET["sgid"]>=14&&$_GET["sgid"]<=14){?>class="active"<?php } ?>>
 					<h3><span class="icon-heart"></span>Electrical</h3>
 					<ul>
 						<li <?php if($_GET["sgid"]==14){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=14">Electrical</a>
 						</li>
+					</ul>
+				</li>
+				<li <?php if($_GET["sgid"]>=15&&$_GET["sgid"]<=17){?>class="active"<?php } ?>>
+					<h3><span class="icon-heart"></span>Safety Signs</h3>
+					<ul>
 						<li <?php if($_GET["sgid"]==15){ ?>class="btn-blue"<?php } ?>>
 							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=15">Brady Glo</a>
 						</li>

@@ -68,7 +68,7 @@
 						<!--button -->
 						<div class="grid_5 prefix_3">
 							<input type="submit" value="Save" />
-							<input type="button" value="Cancel" class="button" />
+							<input type="button" value="Cancel" class="button" onclick="window.location.href = '<?php echo $rootpath; ?>my-account.php';" />
 						</div>
 					</div><!--end wrap-title -->
 				</form>

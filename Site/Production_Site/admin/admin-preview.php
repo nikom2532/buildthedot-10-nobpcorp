@@ -34,9 +34,9 @@
 						$_GET["page"] = 1;
 					}
 					$SQL="
-					SELECT *
-					FROM  `buildthedot_nobp_item`
-					WHERE `subgroup_id` = \"{$_GET["sgid"]}\" ;";
+						SELECT *
+						FROM  `buildthedot_nobp_item`
+						WHERE `subgroup_id` = \"{$_GET["sgid"]}\" ;";
 					$db->query($SQL);
 					$numberPage=(($db->numRows())/16.0);
 					//echo $numberPage;
@@ -48,41 +48,46 @@
 						$numberPage = (int)$numberPage;
 					}
 					//echo $numberPage;
-					
-					if($_GET["page"] > 1){
+					if($numberPage>1){	
+						if($_GET["page"] > 1){
 ?>
-						<li>
-							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]-1; ?>">&lt;&lt;</a>
-						</li>
+							<li>
+								<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]-1; ?>">&lt;&lt;</a>
+							</li>
 <?php
+						}
+						else{
+?>
+							<li>
+								&lt;&lt;
+							</li>
+<?php
+						}
 					}
-					else{
-?>
-						<li>
-							&lt;&lt;
-						</li>
-<?php
+					if($numberPage>1){	
+						for($i=1;$i<=$numberPage;$i++){
+	?>
+							<li <?php if($i==$_GET["page"]){ ?> class="active-page" <?php } ?>>
+								<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+							</li>
+	<?php
+						}
 					}
-					for($i=1;$i<=$numberPage;$i++){
+					if($numberPage>1){	
+						if($_GET["page"] != $numberPage){
 ?>
-						<li <?php if($i==$_GET["page"]){ ?> class="active-page" <?php } ?>>
-							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
-						</li>
+							<li>
+								<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]+1; ?>">&gt;&gt;</a>
+							</li>
 <?php
-					}
-					if($_GET["page"] != $numberPage){
+						}
+						else{
 ?>
-						<li>
-							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]+1; ?>">&gt;&gt;</a>
-						</li>
+							<li>
+								&gt;&gt;
+							</li>
 <?php
-					}
-					else{
-?>
-						<li>
-							&gt;&gt;
-						</li>
-<?php
+						}
 					}
 ?>
 				</ul>
