@@ -36,7 +36,6 @@
             <nav>
                 <ul id="top-nav" class="one-edge-shadow">
                     <li><a href="index.php" id="home"><img src="images/icon-home-w.png"></a></li>
-                     <li><a href="#">About</a></li>
                     <li>
                         <a href="">Label</a>
                         <ul class="noJS">
@@ -81,24 +80,24 @@
 	<div class="container_12" id="wrap-pic">
      	 <img src="images/all-products.jpg" width="960" height="380" alt="All Products">
                 <h4 class="btn-product" id="safetysigns">
-                        <a class="btn-product btn-blue" href="#">
+                        <div class="btn-product btn-blue">
                             <span class="btn-product-title">Safety Signs</span>
-                        </a>
+                        </div>
 			  	</h4>
                 <h4 class="btn-product" id="label">
-                        <a class="btn-product btn-blue" href="#">
+                        <div class="btn-product btn-blue">
                             <span class="btn-product-title">Label</span>
-                        </a>
+                        </div>
 			  	</h4>
                 <h4 class="btn-product" id="lockout">
-                        <a class="btn-product btn-blue" href="#">
+                        <div class="btn-product btn-blue">
                             <span class="btn-product-title">Lockout</span>
-                        </a>
+                        </div>
 			  	</h4>
                 <h4 class="btn-product" id="electrical">
-                        <a class="btn-product btn-blue" href="#">
+                        <div class="btn-product btn-blue">
                             <span class="btn-product-title">Electrical</span>
-                        </a>
+                        </div>
 			  	</h4>
      </div>
     <div class="container_12" id="wrap-content">
@@ -151,6 +150,7 @@
                     <div id="footer-info">NOBP Corporation Group Co.,Ltd.
 44/213-214 ซอย รามอินทรา 65 ถ.รามอินทรา
 แขวงท่าแร้ง เขตบางเขน กรุงเทพฯ 10230</div>
+ 					<h6 id="copyright">&copy; NOBPCORP 2013. All rights reserved.</h6>
           		</div>
                 <div class="grid_3">
                 	<h3>Call us </h3><br/>

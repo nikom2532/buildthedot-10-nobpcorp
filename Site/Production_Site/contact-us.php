@@ -82,7 +82,6 @@ $(document).ready(function(){
            <nav>
                 <ul id="top-nav" class="one-edge-shadow">
                     <li><a href="index.php" id="home"><img src="images/icon-home-w.png"></a></li>
-                     <li><a href="#">About</a></li>
                     <li>
                         <a href="">Label</a>
                         <ul class="noJS">
@@ -177,6 +176,7 @@ $(document).ready(function(){
                     <div id="footer-info">NOBP Corporation Group Co.,Ltd.
 44/213-214 ซอย รามอินทรา 65 ถ.รามอินทรา
 แขวงท่าแร้ง เขตบางเขน กรุงเทพฯ 10230</div>
+<h6 id="copyright">&copy; NOBPCORP 2013. All rights reserved.</h6>
           		</div>
                 <div class="grid_3">
                 	<h3>Call us </h3><br/>

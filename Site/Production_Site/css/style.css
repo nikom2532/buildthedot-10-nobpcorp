@@ -15,7 +15,7 @@ html[xmlns] .clearfix {
      height: 1%;
 }
 body{
-	background-image: url(../images/gray_jean.png);
+	background-image: url(../images/debut_dark.png);
 	background-repeat: repeat;	
 	font-family: Arial;
 }
@@ -145,97 +145,6 @@ h6 {
    	-moz-box-shadow: 0 8px 6px -6px black;
 	box-shadow: 0 8px 6px -6px black;
 }
-/***Nav bar***/
-.topnav{
-	position:absolute;
-	-webkit-box-shadow: 0 8px 6px -6px black;
-   	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
-	z-index:99999999;
-}
-ul.topnav {
-	list-style: none;
-	float: left;
-	width: 870px;
-	/*
-	Edit by fon
-	width: 920px;*/
-	background: #100b4e;
-	font-size: 1.2em;
-	padding-right: 20px;
-	padding-bottom: 0;
-	padding-left: 70px;
-	/*edit by fon
-	padding-left: 20px;*/
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-}
-ul.topnav li {
-	float: left;
-	margin: 0;
-	position: relative; /*--Declare X and Y axis base--*/
-	padding-top: 8px;
-	padding-right: 15px;
-	padding-bottom: 0;
-	padding-left: 0;
-}
-ul.topnav li a{
-	padding: 10px 5px;
-	color: #fff;
-	display: block;
-	text-decoration: none;
-	float: left;
-	font-size: 0.95em;
-	
-}
-ul.topnav li a:hover{
-	/*background: url(../images/topnav_h.gif) no-repeat center top;*/
-	
-}
-ul.topnav li span { /*--Drop down trigger styles--*/
-	width: 17px;
-	height: 35px;
-	float: left;
-	background: url(../images/subnav_b.gif) no-repeat center top;
-}
-ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
-ul.topnav li ul.subnav {
-	list-style: none;
-	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
-	left: 0; top: 45px;
-	background: #FFF;
-	margin: 0; padding: 0;
-	display: none;
-	float: left;
-	width: 170px;
-	-moz-border-radius-bottomleft: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	z-index:10000000;
-	/*border: 1px solid #111;*/
-}
-ul.topnav li ul.subnav li{
-	margin: 0; padding: 0;
-	/*--Create bevel effect--*/
-	/*
-	border-top: 1px solid #252525; 
-	border-bottom: 1px solid #444; 
-	*/
-	clear: both;
-	width: 170px;
-}
-html ul.topnav li ul.subnav li a {
-	float: left;
-	width: 145px;
-	background: #100b4e; /*drop down color*/
-	padding-left: 20px;
-	font-size: 0.9em;
-}
-html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
-	background: #4b4782; 
-}
 #header img {
 	margin-top: 10px;
 	margin-right: 0;
@@ -248,7 +157,6 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 
 /***End Nav bar***/
 .btn-product {
-	cursor: pointer;
 	display: inline-block;
 	white-space: nowrap;
 	nowhitespace: afterproperty;
@@ -259,6 +167,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 	margin-right: 5px;
 	margin-bottom: 5px;
 	margin-left: 0px;
+	opacity: 0.9;
+	-moz-opacity: 0.9;
+	-webkit-opacity: 0.9;
 }
 .btn-product span.btn-product-title {
 	color: #FFF;/*#f8f8f8*/
@@ -275,13 +186,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 	padding-left: 10px;
 }
 
-.btn-product a:hover {
-	text-decoration: none;
-	opacity: 0.9;
-	-moz-opacity: 0.9;
-	-webkit-opacity: 0.9;
-	background:#333332;
-}
+
 
 .btn-blue {
 	background-color: #100b4e;
@@ -314,7 +219,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 #content-intro{
 	margin-bottom: 70px;
-	text-indent: 20px;
+	/*text-indent: 20px;*/
 	margin-left: 40px;
 }
 #content-intro p {
@@ -395,19 +300,17 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 	transform: translateY(-100%);
 	color:#FFF;
 }
-/* End Image Box Style*/.date-news {
-	font-size: 1.1em;
-	margin-right: 15px;
-	font-weight: bold;
+#product-name h5{
+	text-align:center;
+	font-weight:bold;
 }
-
 #wrap-footer {
 }
 
 #footer {
 	color: #FFF;
-	background-color: #333332;
-	height: 120px;
+	background-color: #383636;
+	height: 140px;
 	padding-top: 30px;
 }
 #content-intro #news  {
@@ -435,9 +338,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 #wrap-footer #footer .grid_4.suffix_1 {
 	padding-left: 30px;
 }
-
-#wrap-contact-form input {
-	margin-left: 20px;
+#copyright{
+	margin-top:20px;
+	color:#999;
 }
 #wrap-contact-form input[type="submit"] {
 	margin-top: 18px;
@@ -446,9 +349,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 #wrap-contact-form input[type="reset"]{
 	 margin-left:15px;
 }
-#wrap-contact-form textarea  {
-	margin-left: 20px;
-}
+
 #map {
 	display: inline-block;
 	margin-top: 15px;
@@ -480,7 +381,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 	background-image: url(../images/icon-phone.png);
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
-	padding-left: 18px;
+	padding-left: 35px;
 	font-size: 1em;
 }
 /*-----------form validate------------*/
@@ -580,5 +481,5 @@ label.error{
 }
 .nav-title ul li:last-child{
 	float:left;
-	margin-left:-22px;
+	
 }
