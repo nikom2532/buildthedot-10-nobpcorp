@@ -91,6 +91,7 @@ body {
 	background: #282828;
 	width: 165px;
 	height:780px;
+	height:1024px;
 	margin: 0;
 }
 /*heading styles*/
@@ -299,7 +300,7 @@ body {
 	line-height: 20px;
 }
 #mainwrapper .grid_3 {
-	height: 200px;
+	height: 220px;
 }
 #wrap-imageinfo {
 	background:#DBDBDB;
