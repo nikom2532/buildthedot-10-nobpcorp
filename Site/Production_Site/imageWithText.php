@@ -150,7 +150,7 @@
 					if ($row['pdf_link_status'] == "F") {
 						echo        		'<h5>'.$row['item_name'].'</h5>';
 					} else {
-						echo				'<h5><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'</a><img src="images/icon_pdf_2.gif"></h5>';
+						echo				'<h5><a href="download.php?id='.$row['id'].'">'.$row['item_name'].'<br/><img src="images/icon_pdf_2.gif"></a></h5>';
 					}
 					echo "</div>";
                 echo "</div>";
