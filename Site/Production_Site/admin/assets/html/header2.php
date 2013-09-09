@@ -26,6 +26,18 @@
 		</div>
 	</div><!--end container_16 -->
 </div><!--end wrap-header -->
+<?php
+	$SQL="SELECT * FROM `buildthedot_nobp_item_subgroup` WHERE `id`= '".$_GET["sgid"]."';";
+	$db->query($SQL);
+	if($rs=$db->fetchAssoc()){
+		$subgroup_name = $rs["subgroup_name"];
+		$SQL2="SELECT * FROM `buildthedot_nobp_item_group` WHERE `id`= '".$rs["group_id"]."' ";
+		$db->query($SQL2);
+		if($rs2=$db->fetchAssoc()){
+			$group_name=$rs2["group_name"];
+		}
+	}
+?>
 <div>
 	<div class="container_16" id="wrap-box">
 		<div id="accordian" class="grid_2">

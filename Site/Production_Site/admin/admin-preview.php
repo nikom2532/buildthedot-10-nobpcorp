@@ -8,13 +8,13 @@
 	<div class="grid_13" id="wrap-title">
 		<ul>
 			<li>
-				<a href="#">Label</a>
+				<a href="#"><?php echo $group_name; ?></a>
 			</li>
 			<li>
 				&gt;
 			</li>
 			<li>
-				<a href="#" class="active">Barcode label</a>
+				<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>" class="active"><?php echo $subgroup_name; ?></a>
 			</li>
 		</ul>
 	</div><!--end wrap-title -->
@@ -29,35 +29,95 @@
 			</div>
 			<div class="grid_5 prefix_3 right" id="page-num">
 				<ul class="right">
-					<li class="active-page">
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">4</a>
-					</li>
-					<li>
-						<a href="#">5</a>
-					</li>
-					<li>
-						<a href="#">>></a>
-					</li>
+<?php
+					if($_GET["page"] ==""){
+						$_GET["page"] = 1;
+					}
+					$SQL="
+					SELECT *
+					FROM  `buildthedot_nobp_item`
+					WHERE `subgroup_id` = \"{$_GET["sgid"]}\" ;";
+					$db->query($SQL);
+					$numberPage=(($db->numRows())/16.0);
+					//echo $numberPage;
+					//echo (int)$numberPage;
+					if((int)$numberPage != $numberPage){
+						$numberPage = (int)$numberPage + 1; 
+					}
+					else{
+						$numberPage = (int)$numberPage;
+					}
+					//echo $numberPage;
+					
+					if($_GET["page"] > 1){
+?>
+						<li>
+							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]-1; ?>">&lt;&lt;</a>
+						</li>
+<?php
+					}
+					else{
+?>
+						<li>
+							&lt;&lt;
+						</li>
+<?php
+					}
+					
+					for($i=1;$i<=$numberPage;$i++){
+?>
+						<li <?php if($i==$_GET["page"]){ ?> class="active-page" <?php } ?>>
+							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
+						</li>
+<?php
+					}
+					
+?>
+
+					<!-- <li>
+						<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=1">1</a>
+					</li> -->
+<?php
+					if($_GET["page"] != $numberPage){
+?>
+						<li>
+							<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=<?php echo $_GET["page"]+1; ?>">&gt;&gt;</a>
+						</li>
+<?php
+					}
+					else{
+?>
+						<li>
+							&gt;&gt;
+						</li>
+<?php
+					}
+?>
 				</ul>
 			</div>
 		</div><!-- end sub-nav-->
 		<div id="wrap-mainwrapper" class="grid_13">
 			<div id="mainwrapper">
 <?php 
-				$SQL="
+			 	$SQL="
 					SELECT *
 					FROM  `buildthedot_nobp_item`
 					WHERE `subgroup_id` = \"{$_GET["sgid"]}\"
-				";
+					LIMIT ".(16*($_GET["page"]-1)).",16";
+				/*
+				if($_GET["page"]==1){
+					$SQL .= "0,16; ";
+				}
+				elseif($_GET["page"]==2){
+					$SQL .= "16,16; ";
+				}
+				elseif($_GET["page"]>2){
+					//$SQL .= (($_GET["page"]-1)*16)).",16; ";
+					$SQL .= (16+(16*($_GET["page"]-2))).",16; ";
+				}
+				*/
+				//LIMIT (page*16)-1,16
+				//0, 16, 16+16, 16+32
 				$db->query($SQL);
 				while($rs=$db->fetchAssoc()){
 					//echo $rs["name"];
