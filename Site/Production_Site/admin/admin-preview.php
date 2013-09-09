@@ -63,7 +63,6 @@
 						</li>
 <?php
 					}
-					
 					for($i=1;$i<=$numberPage;$i++){
 ?>
 						<li <?php if($i==$_GET["page"]){ ?> class="active-page" <?php } ?>>
@@ -71,13 +70,6 @@
 						</li>
 <?php
 					}
-					
-?>
-
-					<!-- <li>
-						<a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>&page=1">1</a>
-					</li> -->
-<?php
 					if($_GET["page"] != $numberPage){
 ?>
 						<li>
@@ -120,7 +112,6 @@
 				//0, 16, 16+16, 16+32
 				$db->query($SQL);
 				while($rs=$db->fetchAssoc()){
-					//echo $rs["name"];
 ?>
 					<a href="<?php echo $rootpath; ?>admin-form-edit.php?id=<?php echo $rs["id"]; ?>">
 						<div class="grid_3">
@@ -132,6 +123,29 @@
 								<?php echo $rs["item_name"]; ?>
 							</div>
 						</div>
+<?php
+						if(($db->numRows()) < 4 ){
+							if(($db->numRows()) == 1 ){
+?>
+								<div class="grid_9">
+<?php
+							}
+							elseif(($db->numRows()) == 2 ) {
+?>
+								<div class="grid_6">
+<?php
+							}
+							elseif(($db->numRows()) == 3 ) {
+?>
+								<div class="grid_6">
+<?php
+							}
+?>
+									
+								</div>
+<?php
+						}
+?>
 					</a>
 <?php
 				}
