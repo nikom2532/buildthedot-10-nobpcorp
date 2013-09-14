@@ -13,9 +13,9 @@
 ?>
 			<div class="grid_13" id="wrap-title">
 				<ul>
-					<li><a href="#">Label</a></li>
+					<li><a href="#"><?php echo $group_name; ?></a></li>
 					<li>&gt;</li>
-					<li><a href="#" class="active">Barcode label</a></li>
+					<li><a href="<?php echo $rootpath; ?>admin-preview.php?sgid=<?php echo $_GET["sgid"]; ?>" class="active">Barcode label</a></li>
 				</ul>
 			</div><!--end wrap-title -->
 			<div class="grid_13" id="wrap-content">

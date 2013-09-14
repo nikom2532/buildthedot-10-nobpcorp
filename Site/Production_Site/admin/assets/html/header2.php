@@ -27,6 +27,17 @@
 	</div><!--end container_16 -->
 </div><!--end wrap-header -->
 <?php
+	if(!isset($_GET["sgid"])){
+		$SQL="
+			SELECT * 
+			FROM  `buildthedot_nobp_item`
+			WHERE `id` = '{$_GET["id"]}'
+		";
+		$db->query($SQL);
+		if($rs=$db->fetchAssoc()){
+			$_GET["sgid"]=$rs["subgroup_id"];
+		}
+	}
 	$SQL="SELECT * FROM `buildthedot_nobp_item_subgroup` WHERE `id`= '".$_GET["sgid"]."';";
 	$db->query($SQL);
 	if($rs=$db->fetchAssoc()){
