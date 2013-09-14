@@ -24,6 +24,8 @@ $(function() {
 	if (!($('input#group1').is(':checked'))) {
 		admin_pdf_edit_enable_cb();
 	}
+	
+	
 });
 
 function admin_pdf_edit_enable_cb() {

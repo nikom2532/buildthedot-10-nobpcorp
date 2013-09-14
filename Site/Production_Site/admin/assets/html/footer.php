@@ -1,6 +1,7 @@
-﻿		<script src="<?php echo $rootpath; ?>js/prefix.js"jquery-l.js></script>
-		<script src="<?php echo $rootpath; ?>js/jquery-1.7.1.min.js"jquery-l.js></script>
+﻿		<script src="<?php echo $rootpath; ?>js/prefix.js"></script>
+		<script src="<?php echo $rootpath; ?>js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="<?php echo $rootpath; ?>js/jquery_notification_v.1.js"></script>
+		<script src="<?php echo $rootpath; ?>js/jquery.validate.min.js"></script>
 		<script src="<?php echo $rootpath; ?>js/script2.js"></script>
 <?php
 		if($_GET["u_suc"]==1){
