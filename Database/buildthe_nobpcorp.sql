@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2013 at 02:22 PM
+-- Generation Time: Sep 15, 2013 at 02:38 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.3.10-1ubuntu3.7
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `buildthedot_nobp_item` (
   `account_id` int(50) NOT NULL,
   `datetime` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=132 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=134 ;
 
 --
 -- Dumping data for table `buildthedot_nobp_item`
@@ -211,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `buildthedot_nobp_item_pdf` (
   `item_id` int(50) NOT NULL,
   `pdf_link` varchar(200) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `buildthedot_nobp_item_pdf`
