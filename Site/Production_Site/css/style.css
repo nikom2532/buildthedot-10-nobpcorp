@@ -239,7 +239,7 @@ h6 {
 }
 #mainwrapper .box {
 	border: 5px solid #fff;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	height: 163px;
 	float: left;
 	margin: 5px;

@@ -34,7 +34,7 @@
 				<div class="grid_8">
 					<input name="imagefile" type="file" size="50" />
 				</div>
-				<div class="grid_8 prefix_2">
+				<div class="grid_8 prefix_2" id="button-submit">
 					<input type="submit" value="Submit">
 				</div>
 				<input name="sgid" type="hidden" value="<?php echo $_GET["sgid"]; ?>" />
