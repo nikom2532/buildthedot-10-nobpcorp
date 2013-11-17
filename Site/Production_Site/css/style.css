@@ -118,19 +118,18 @@ h6 {
 	padding-left:18px;
 }
 #header-tel ul {
-	text-align: center;
 	display: block;
-	margin-right: auto;
-	margin-top: 30px;
-	background-image: url(../images/icon-phone.png);
-	background-repeat: no-repeat;
-	background-position: 10px center;
+	padding-right: 15px;
+	margin-top: 10px;
 }
 
 #header-tel ul li {
 	display: inline-block;
 	height: 20px;
-	padding-top: 12px;
+	padding-top: 8px;
+	float: right;
+	color: #100B4E;
+	font-weight: bold;
 }
 #address h5 {
 	background-image: url(../images/icon-phone.png);
@@ -482,4 +481,8 @@ label.error{
 .nav-title ul li:last-child{
 	float:left;
 	
+}
+.text-red{
+	color:#C00003;
+	font-weight: bold;
 }

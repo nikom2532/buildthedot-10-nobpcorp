@@ -13,23 +13,24 @@
 		<link rel="apple-touch-icon" href="css/images/icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="css/images/icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="css/images/icon-114x114.png">
-		<script src="js/jquery-l.js"jquery-l.js></script>
+		<script src="js/jquery-l.js"></script>
+		<script src="js/marquee-image.js"></script>
 	</head>
 
 	<body>
 		<div class="container_12">
 			<!--menu -->
 			<div id="wrap-header">
-				<div id="header" class="grid_6">
+				<div id="header" class="grid_4">
 					<img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
 				</div>
-				<div class="grid_4 right" id="header-tel">
+				<div class="grid_6 right" id="header-tel">
 					<ul>
-						<li id="tel">
-							0-2945-7261-2,
+						<li>
+							<p class="text-red">ISO 9001:2008</p>
 						</li>
 						<li>
-							Fax. 0-2945-8554
+							<p>นอบ์พ ใส่ใจด้านบริการ  เพื่อตอบสนองความต้องการของลูกค้า</p>
 						</li>
 					</ul>
 				</div>
@@ -139,6 +140,7 @@
 				<span class="btn-product-title">Electrical</span>
 			</div></h4>
 		</div>
+		</div>
 		<div class="container_12" id="wrap-content">
 			<div id="content-intro">
 				<h2 class="home-title">Welcome to nobpcorp.com</h2>
@@ -173,6 +175,14 @@
 						</div>
 					</div>
 				</div><!--end mainwrapper -->
+				<div class="grid_12">
+					<div class="marquee" id="mycrawler2">
+						<img src="images/client/Brady.jpg" /> 
+						<img src="images/client/ferraz_shawmut.jpg" /> 
+						<img src="images/client/masterlock.jpg" /> 
+						<img src="images/client/panduit.jpg" /> 
+					</div>
+				</div>
 			</div><!--end content -->
 		</div><!--end container -->
 		<div id="wrap-footer">
@@ -208,5 +218,21 @@
 		<!--<script src="js/jquery.js"></script>-->
 
 		<script src="js/plugins.js"></script>
+		<script type="text/javascript">
+		marqueeInit({
+			uniqueid: 'mycrawler2',
+			style: {
+				//'padding': '5px',
+				'width': '840px',
+				'height': '180px'
+			},
+			inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+			mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+			moveatleast: 2,
+			neutral: 150,
+			savedirection: true,
+			random: true
+		});
+		</script>
 	</body>
 </html>
