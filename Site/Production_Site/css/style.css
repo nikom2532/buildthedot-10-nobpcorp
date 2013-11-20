@@ -489,4 +489,7 @@ label.error{
 #branding{
 	margin-top:30px;
 }
+#branding img{
+	margin-left: 10px;
+}
 
