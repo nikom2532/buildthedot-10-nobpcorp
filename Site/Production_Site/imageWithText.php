@@ -20,16 +20,20 @@
     <div class="container_12">   
          <!--menu -->
        <div id="wrap-header">
-           <div id="header" class="grid_6">
-                <img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
-           </div>
-           <div class="grid_4 right" id="header-tel">
-               <ul>
-                    <li id="tel">0-2945-7261-2,</li>
-                    <li>Fax. 0-2945-8554</li>
-               </ul>
-           </div>
-       </div><!--end wrap-header -->      
+				<div id="header" class="grid_4">
+					<img src="images/logo_nodesc.png" alt="NOBP Corporation Group">
+				</div>
+				<div class="grid_6 right" id="header-tel">
+					<ul>
+						<li>
+							<p class="text-red">ISO 9001:2008</p>
+						</li>
+						<li>
+							<p>นอบ์พ ใส่ใจด้านบริการ  เพื่อตอบสนองความต้องการของลูกค้า</p>
+						</li>
+					</ul>
+				</div>
+			</div><!--end wrap-header -->  
     </div><!--end container_12 --> 
     <div id="wrap-nav">
     	<div class="container_12">
@@ -167,8 +171,9 @@
                 <div class="grid_4 suffix_1">
                 	<h3> Visit us </h3><br/>
                     <div id="footer-info">NOBP Corporation Group Co.,Ltd.
-44/213-214 ซอย รามอินทรา 65 ถ.รามอินทรา
-แขวงท่าแร้ง เขตบางเขน กรุงเทพฯ 10230</div>
+						44/213-214 ซอย รามอินทรา 65 ถ.รามอินทรา
+						แขวงท่าแร้ง เขตบางเขน กรุงเทพฯ 10230
+				    </div>
 <h6 id="copyright">&copy; NOBPCORP 2013. All rights reserved.</h6>
           		</div>
                 <div class="grid_3">

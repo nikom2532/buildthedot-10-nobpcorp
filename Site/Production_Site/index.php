@@ -175,7 +175,7 @@
 						</div>
 					</div>
 				</div><!--end mainwrapper -->
-				<div class="grid_12">
+				<div class="grid_12" id="branding">
 					<div class="marquee" id="mycrawler2">
 						<img src="images/client/Brady.jpg" /> 
 						<img src="images/client/ferraz_shawmut.jpg" /> 
@@ -224,7 +224,7 @@
 			style: {
 				//'padding': '5px',
 				'width': '840px',
-				'height': '180px'
+				'height': '150px'
 			},
 			inc: 5, //speed - pixel increment for each iteration of this marquee's movement
 			mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
