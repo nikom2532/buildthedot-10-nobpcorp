@@ -121,8 +121,9 @@
 				</nav>
 			</div>
 		</div>
-		<div class="container_12" id="wrap-pic">
+		<div class="container_12" id="wrap-pic" style="margin-top:43px;">
 			<img src="images/all-products.png" width="960" height="380" alt="All Products">
+			<?php /*
 			<h4 class="btn-product" id="safetysigns">
 			<div class="btn-product btn-blue">
 				<span class="btn-product-title">Safety Signs</span>
@@ -139,6 +140,7 @@
 			<div class="btn-product btn-blue">
 				<span class="btn-product-title">Electrical</span>
 			</div></h4>
+			*/ ?>
 		</div>
 		</div>
 		<div class="container_12" id="wrap-content">
