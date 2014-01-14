@@ -122,7 +122,7 @@
 			</div>
 		</div>
 		<div class="container_12" id="wrap-pic">
-			<img src="images/all-products.jpg" width="960" height="380" alt="All Products">
+			<img src="images/all-products.png" width="960" height="380" alt="All Products">
 			<h4 class="btn-product" id="safetysigns">
 			<div class="btn-product btn-blue">
 				<span class="btn-product-title">Safety Signs</span>
